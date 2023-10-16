@@ -1,8 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Press_Start_2P } from 'next/font/google'
+import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] })
+const pressStart2P = Press_Start_2P({
+  weight: '400',
+  subsets: ['latin']
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={pressStart2P.className + ' text-white'}>
+        <div className='w-screen h-screen m-0 py-8 px-16 bg-black flex flex-col items-center'>
+          <h1 className="text-5xl mb-16"><Link href="/">Vim Invaders</Link></h1>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
