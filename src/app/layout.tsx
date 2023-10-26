@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={pressStart2P.className + ' text-white'}>
-        <div className='w-screen h-screen m-0 py-8 px-16 bg-black flex flex-col items-center'>
+        <div className='w-screen min-h-screen m-0 py-8 px-16 bg-black flex flex-col items-center'>
           <h1 className="text-5xl mb-16"><Link href="/">Vim Invaders</Link></h1>
           {children}
         </div>
